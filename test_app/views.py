@@ -5,6 +5,8 @@ from test_app.serializers import PromptSerializer
 
 
 class TestView(views.APIView):
+    '''This is a test view'''
+
     def post(self, request):
         serializer = PromptSerializer(data=request.data)
         if serializer.is_valid():
